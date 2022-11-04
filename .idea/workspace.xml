@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="" />
+    <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part1/SortIntArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/SortIntArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/part1/SortIntArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part1/SortIntArrayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GzRRyBbx7wAkobFHmKmpJfL69g" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -16,13 +44,120 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="part3.figures" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="part2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SortStringListTest">
+    <configuration name="FigureSortingOperationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part3" />
+      <option name="MAIN_CLASS_NAME" value="part3.FigureSortingOperationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortIntArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part1" />
+      <option name="MAIN_CLASS_NAME" value="part1.SortIntArrayTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortStringListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part2" />
+      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortStringListTest.getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part2" />
+      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
+      <option name="METHOD_NAME" value="getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortStringListTest.top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part2" />
+      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
+      <option name="METHOD_NAME" value="top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SortStringListTest" />
+        <item itemvalue="JUnit.FigureSortingOperationTest" />
+        <item itemvalue="JUnit.SortIntArrayTest" />
+        <item itemvalue="JUnit.SortStringListTest.top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" />
+        <item itemvalue="JUnit.SortStringListTest.getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,7 +166,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667389424501</updated>
+      <workItem from="1667389425770" duration="15499000" />
+      <workItem from="1667412222803" duration="9854000" />
+      <workItem from="1667486830626" duration="1033000" />
+      <workItem from="1667487886680" duration="23851000" />
+      <workItem from="1667579520252" duration="1343000" />
+      <workItem from="1667580889618" duration="779000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
