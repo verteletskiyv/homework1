@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class FigureSortingOperation {
     /**
-     * @param collection of objects extending AbstractFigure (Cube/Cylinder/Sphere/etc.);
+     * @param figures collection of objects extending AbstractFigure (Cube/Cylinder/Sphere/etc.);
      * @return immutable list of AbstractFigures sorted by their volume in ascending order;
      * @throws NullPointerException if input is NULL;
      */
