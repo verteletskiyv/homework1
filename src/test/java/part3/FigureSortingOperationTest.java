@@ -1,8 +1,7 @@
 package part3;
 
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import part3.figures.*;
 
 import java.util.ArrayList;
@@ -12,72 +11,108 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class FigureSortingOperationTest {
-    public static List<AbstractFigure> list1, list2, list3;
-    public static Set<AbstractFigure> set1, set2, set3;
+    public static List<AbstractFigure> listNormal, listWithNull, listEmpty;
+    public static Set<AbstractFigure> setNormal, setWithNull, setEmpty;
 
-    @BeforeClass
+    @BeforeAll
     public static void initCollections() {
-        list1 = List.of(new Cube(25), new Cylinder(20, 20), new Sphere(15));
-        list2 = Stream.of(new Cylinder(0.1, 11.1), null, new Sphere(2.2)).toList();
-        list3 = new ArrayList<>();
+        listNormal = List.of(new Cube(25), new Cylinder(20, 20), new Sphere(15));
+        listWithNull = Stream.of(new Cylinder(0.1, 11.1), null, new Sphere(2.2)).toList();
+        listEmpty = new ArrayList<>();
 
-        set1 = Set.of(new Cube(25), new Cylinder(20, 20), new Sphere(15));
-        set2 = Stream.of(new Cylinder(0.1, 11.1), null, new Sphere(2.2)).collect(Collectors.toSet());
-        set3 = new HashSet<>();
+        setNormal = Set.of(new Cube(25), new Cylinder(20, 20), new Sphere(15));
+        setWithNull = Stream.of(new Cylinder(0.1, 11.1), null, new Sphere(2.2)).collect(Collectors.toSet());
+        setEmpty = new HashSet<>();
     }
 
     @Test
     public void sortByVolumeShouldNotReturnNullHavingNonNullInput() {
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(list1));
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(list2));
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(list3));
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(set1));
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(set2));
-        Assert.assertNotNull(FigureSortingOperation.sortByVolume(set3));
+        assertNotNull(FigureSortingOperation.sortByVolume(listNormal));
+        assertNotNull(FigureSortingOperation.sortByVolume(listWithNull));
+        assertNotNull(FigureSortingOperation.sortByVolume(listEmpty));
+        assertNotNull(FigureSortingOperation.sortByVolume(setNormal));
+        assertNotNull(FigureSortingOperation.sortByVolume(setWithNull));
+        assertNotNull(FigureSortingOperation.sortByVolume(setEmpty));
     }
 
     @Test
     public void sortByVolumeShouldReturnAListOfFiguresSortedByVolumeASC() {
         List<AbstractFigure> expected = new ArrayList<>();
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(list3));
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(set3));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(listEmpty));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(setEmpty));
 
         expected.add(new Sphere(15));
         expected.add(new Cube(25));
         expected.add(new Cylinder(20, 20));
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(list1));
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(set1));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(listNormal));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(setNormal));
         expected.clear();
 
         expected.add(new Cylinder(0.1, 11.1));
         expected.add(new Sphere(2.2));
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(list2));
-        Assert.assertEquals(expected, FigureSortingOperation.sortByVolume(set2));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(listWithNull));
+        assertEquals(expected, FigureSortingOperation.sortByVolume(setWithNull));
     }
 
     @Test
     public void volumeGettersOfFiguresShouldReturnCorrectValues() {
-        Assert.assertEquals(15625, Math.floor(new Cube(25).getVolume()), 1e-9);
-        Assert.assertEquals(25132, Math.floor(new Cylinder(20, 20).getVolume()), 1e-9);
-        Assert.assertEquals(14137, Math.floor(new Sphere(15).getVolume()), 1e-9);
+        assertEquals(15625.0, new Cube(25).getVolume(), 0.01);
+        assertEquals(25132.74, new Cylinder(20, 20).getVolume(), 0.01);
+        assertEquals(14137.16, new Sphere(15).getVolume(), 0.01);
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test()
     public void creatingFigureWithZeroOrNegativeValuesShouldThrowIllegalArgumentException() {
-        FigureSortingOperation.sortByVolume(List.of(new Sphere(0)));
-        FigureSortingOperation.sortByVolume(List.of(new Sphere(-1)));
-        FigureSortingOperation.sortByVolume(List.of(new Cube(0)));
-        FigureSortingOperation.sortByVolume(List.of(new Cube(-1)));
-        FigureSortingOperation.sortByVolume(List.of(new Cylinder(0, 1)));
-        FigureSortingOperation.sortByVolume(List.of(new Cylinder(1, 0)));
-        FigureSortingOperation.sortByVolume(List.of(new Cylinder(1, -1)));
-        FigureSortingOperation.sortByVolume(List.of(new Cylinder(-1, 1)));
-        FigureSortingOperation.sortByVolume(List.of(new Cylinder(-1, 1)));
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Sphere(0))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Sphere(-1))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cube(0))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cube(-1))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cylinder(0, 1))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cylinder(1, 0))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cylinder(1, -1))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
+
+        exception = assertThrows(IllegalArgumentException.class,
+                () -> FigureSortingOperation.sortByVolume(List.of(new Cylinder(-1, 1))),
+                "Allowed negative or zero input");
+        assertEquals(exception.getMessage(), "Values must be positive");
     }
 
-    @Test(expected = NullPointerException.class)
+    @Test()
     public void sortByVolumeShouldThrowNPEifInputIsNull() {
-        Assert.assertNull(FigureSortingOperation.sortByVolume(null));
+        NullPointerException exception = assertThrows(NullPointerException.class, () -> FigureSortingOperation.sortByVolume(null));
+        assertTrue(exception.getMessage().contains("\"figures\" is null"));
     }
 }
