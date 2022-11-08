@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part1/SortIntArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part1/SortIntArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/part1/SortIntArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part1/SortIntArrayTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" afterDir="false" />
     </list>
@@ -70,7 +64,7 @@
       <recent name="part2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortStringListTest">
+  <component name="RunManager" selected="JUnit.FigureSortingOperationTest.sortByVolumeShouldThrowNPEifInputIsNull">
     <configuration name="FigureSortingOperationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
@@ -86,17 +80,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortIntArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FigureSortingOperationTest.creatingFigureWithZeroOrNegativeValuesShouldThrowIllegalArgumentException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="part1.*" />
+          <option name="PATTERN" value="part3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="part1" />
-      <option name="MAIN_CLASS_NAME" value="part1.SortIntArrayTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="part3" />
+      <option name="MAIN_CLASS_NAME" value="part3.FigureSortingOperationTest" />
+      <option name="METHOD_NAME" value="creatingFigureWithZeroOrNegativeValuesShouldThrowIllegalArgumentException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FigureSortingOperationTest.sortByVolumeShouldThrowNPEifInputIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part3" />
+      <option name="MAIN_CLASS_NAME" value="part3.FigureSortingOperationTest" />
+      <option name="METHOD_NAME" value="sortByVolumeShouldThrowNPEifInputIsNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FigureSortingOperationTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part3" />
+      <option name="MAIN_CLASS_NAME" value="part3.FigureSortingOperationTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,45 +143,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortStringListTest.getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="part2" />
-      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
-      <option name="METHOD_NAME" value="getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortStringListTest.top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="part2" />
-      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
-      <option name="METHOD_NAME" value="top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SortStringListTest" />
+        <item itemvalue="JUnit.FigureSortingOperationTest.sortByVolumeShouldThrowNPEifInputIsNull" />
         <item itemvalue="JUnit.FigureSortingOperationTest" />
-        <item itemvalue="JUnit.SortIntArrayTest" />
-        <item itemvalue="JUnit.SortStringListTest.top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" />
-        <item itemvalue="JUnit.SortStringListTest.getUniqueWordsShouldReturnACopyOfAGivenStringWithNoDuplicateWords" />
+        <item itemvalue="JUnit.FigureSortingOperationTest.test" />
+        <item itemvalue="JUnit.FigureSortingOperationTest.creatingFigureWithZeroOrNegativeValuesShouldThrowIllegalArgumentException" />
+        <item itemvalue="JUnit.SortStringListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,12 +166,27 @@
       <workItem from="1667486830626" duration="1033000" />
       <workItem from="1667487886680" duration="23851000" />
       <workItem from="1667579520252" duration="1343000" />
-      <workItem from="1667580889618" duration="779000" />
+      <workItem from="1667580889618" duration="1399000" />
+      <workItem from="1667745635281" duration="45000" />
+      <workItem from="1667745770588" duration="21000" />
+      <workItem from="1667903903160" duration="5445000" />
     </task>
+    <task id="LOCAL-00001" summary="upd">
+      <created>1667581825315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667581825315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

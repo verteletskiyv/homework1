@@ -1,8 +1,15 @@
 package part2;
 
-import org.junit.*;
 
-import java.util.*;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class SortStringListTest {
     private static List<String> inputList1, inputList2, inputList3, inputList4;
@@ -32,12 +39,11 @@ public class SortStringListTest {
     }
 
     @Test
-    public void top5ShouldReturnNonNullList() {
-        Assert.assertNotNull(SortStringList.top5(inputList1));
-        Assert.assertNotNull(SortStringList.top5(inputList2));
-        Assert.assertNotNull(SortStringList.top5(inputList3));
-        Assert.assertNotNull(SortStringList.top5(inputList4));
-        Assert.assertNotNull(SortStringList.top5(null));
+    public void top5ShouldNotReturnNullHavingNonNullInput() {
+        Assert.assertNotNull(SortStringList.top5Tags(inputList1));
+        Assert.assertNotNull(SortStringList.top5Tags(inputList2));
+        Assert.assertNotNull(SortStringList.top5Tags(inputList3));
+        Assert.assertNotNull(SortStringList.top5Tags(inputList4));
     }
 
     @Test
@@ -57,7 +63,7 @@ public class SortStringListTest {
         expected.put("#LoremIpsum", 2L);
         expected.put("#react", 2L);
         expected.put("#HTML", 1L);
-        Assert.assertEquals(expected, SortStringList.top5(inputList1));
+        Assert.assertEquals(expected, SortStringList.top5Tags(inputList1));
         expected.clear();
 
         expected.put("#LoremIpsum", 4L);
@@ -65,12 +71,11 @@ public class SortStringListTest {
         expected.put("#HTML", 2L);
         expected.put("#java", 2L);
         expected.put("#react", 1L);
-        Assert.assertEquals(expected, SortStringList.top5(inputList2));
+        Assert.assertEquals(expected, SortStringList.top5Tags(inputList2));
 
         expected = new HashMap<>();
-        Assert.assertEquals(expected, SortStringList.top5(inputList3));
-        Assert.assertEquals(expected, SortStringList.top5(inputList4));
-        Assert.assertEquals(expected, SortStringList.top5(null));
+        Assert.assertEquals(expected, SortStringList.top5Tags(inputList3));
+        Assert.assertEquals(expected, SortStringList.top5Tags(inputList4));
     }
 
     @Test
@@ -87,5 +92,10 @@ public class SortStringListTest {
         expected = "";
         Assert.assertEquals(expected, SortStringList.getUniqueWords(str4));
         Assert.assertEquals(expected, SortStringList.getUniqueWords(null));
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void top5ShouldThrowNPEifInputIsNull() {
+        Assert.assertNull(SortStringList.top5Tags(null));
     }
 }
