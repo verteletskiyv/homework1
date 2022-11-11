@@ -1,11 +1,12 @@
 package part2;
 
-import java.util.LinkedHashMap;
-import java.util.Comparator;
-import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.LinkedHashMap;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class SortStringList {
@@ -17,29 +18,23 @@ public class SortStringList {
      */
     public static Map<String, Long> top5Tags(List<String> inputList) {
         List<String> lineUniqueWords = new ArrayList<>();
-        inputList.forEach(line -> lineUniqueWords.add(getUniqueWords(line)));
+        Set<String> set = new HashSet<>();
 
-        StringBuilder sb = new StringBuilder();
-        lineUniqueWords.forEach(w -> sb.append(w).append(" "));
+        for (String line : inputList) {
+            if (line == null) line = "";
 
-        return Arrays.stream(sb.toString().split("\\s"))
-                .filter(w -> w.startsWith("#"))
+            set.addAll(List.of(line.split("\\s")));
+            lineUniqueWords.addAll(set);
+            set.clear();
+        }
+
+        return lineUniqueWords.stream()
+                .filter(word -> word.startsWith("#"))
                 .collect(Collectors.groupingBy(w -> w, Collectors.counting()))
                 .entrySet().stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(5)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
                         (e1, e2) -> e1, LinkedHashMap::new));
-    }
-    /**
-     * @param str the input line of words. May contain #hashtags.
-     * @return line with only unique words or an empty String if input is NULL;
-     */
-     protected static String getUniqueWords(String str) {
-        if (str == null) return "";
-
-        StringBuilder sb = new StringBuilder();
-        Arrays.stream(str.split("\\s")).distinct().forEach(w -> sb.append(w).append(" "));
-        return sb.toString().trim();
     }
 }
