@@ -26,6 +26,8 @@ public class Cube implements FigureCalculations {
     }
 
     public void setEdge(double edge) {
+        if (edge <= 0)
+            throw new IllegalArgumentException("Values must be positive");
         this.edge = edge;
     }
 

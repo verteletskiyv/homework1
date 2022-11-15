@@ -16,6 +16,8 @@ public class Sphere implements FigureCalculations {
     }
 
     public void setRadius(double radius) {
+        if (radius <= 0)
+            throw new IllegalArgumentException("Values must be positive");
         this.radius = radius;
     }
 

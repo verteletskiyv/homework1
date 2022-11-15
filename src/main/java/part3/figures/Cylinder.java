@@ -18,6 +18,8 @@ public class Cylinder implements FigureCalculations {
     }
 
     public void setHeight(double height) {
+        if (height <= 0)
+            throw new IllegalArgumentException("Values must be positive");
         this.height = height;
     }
 
@@ -26,6 +28,8 @@ public class Cylinder implements FigureCalculations {
     }
 
     public void setBaseRadius(double baseRadius) {
+        if (baseRadius <= 0)
+            throw new IllegalArgumentException("Values must be positive");
         this.baseRadius = baseRadius;
     }
 

@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/part3/figures/FigureCalculations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +164,7 @@
       <workItem from="1668167161686" duration="2881000" />
       <workItem from="1668522601525" duration="80000" />
       <workItem from="1668522693420" duration="10000" />
-      <workItem from="1668523971381" duration="455000" />
+      <workItem from="1668523971381" duration="767000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1667581825315</created>
@@ -203,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668169755421</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Substituted abstractClass with interface to calculate volume;">
+      <created>1668524713018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668524713018</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +212,8 @@
     <MESSAGE value="Add javaDoc, minor refactoring" />
     <MESSAGE value="Upd jUnit4 to jUnit5" />
     <MESSAGE value="Refactor 'part2'; Now using Set to distinct." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor 'part2'; Now using Set to distinct." />
+    <MESSAGE value="Substituted abstractClass with interface to calculate volume;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Substituted abstractClass with interface to calculate volume;" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
