@@ -2,14 +2,13 @@ package part3.figures;
 
 import java.util.Objects;
 
-public class Sphere extends AbstractFigure {
+public class Sphere implements FigureCalculations {
     private double radius;
 
     public Sphere(double radius) {
         if (radius <= 0)
             throw new IllegalArgumentException("Values must be positive");
         this.radius = radius;
-        this.volume = calculateVolume();
     }
 
     public double getRadius() {
@@ -20,14 +19,9 @@ public class Sphere extends AbstractFigure {
         this.radius = radius;
     }
 
-
-    public double getVolume() {
-        return volume;
-    }
-
     @Override
     public String toString() {
-        return "Sphere{" + "radius=" + radius + ", volume=" + volume + '}';
+        return "Sphere{" + "radius=" + radius + ", volume=" + calculateVolume() + '}';
     }
 
     @Override

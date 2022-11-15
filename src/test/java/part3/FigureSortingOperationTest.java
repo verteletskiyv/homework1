@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FigureSortingOperationTest {
-    public static List<AbstractFigure> listNormal, listWithNull, listEmpty;
-    public static Set<AbstractFigure> setNormal, setWithNull, setEmpty;
+    public static List<FigureCalculations> listNormal, listWithNull, listEmpty;
+    public static Set<FigureCalculations> setNormal, setWithNull, setEmpty;
 
     @BeforeAll
     public static void initCollections() {
@@ -43,7 +43,7 @@ public class FigureSortingOperationTest {
 
     @Test
     public void sortByVolumeShouldReturnAListOfFiguresSortedByVolumeASC() {
-        List<AbstractFigure> expected = new ArrayList<>();
+        List<FigureCalculations> expected = new ArrayList<>();
         assertEquals(expected, FigureSortingOperation.sortByVolume(listEmpty));
         assertEquals(expected, FigureSortingOperation.sortByVolume(setEmpty));
 
@@ -58,13 +58,6 @@ public class FigureSortingOperationTest {
         expected.add(new Sphere(2.2));
         assertEquals(expected, FigureSortingOperation.sortByVolume(listWithNull));
         assertEquals(expected, FigureSortingOperation.sortByVolume(setWithNull));
-    }
-
-    @Test
-    public void volumeGettersOfFiguresShouldReturnCorrectValues() {
-        assertEquals(15625.0, new Cube(25).getVolume(), 0.01);
-        assertEquals(25132.74, new Cylinder(20, 20).getVolume(), 0.01);
-        assertEquals(14137.16, new Sphere(15).getVolume(), 0.01);
     }
 
     @Test()

@@ -2,7 +2,7 @@ package part3.figures;
 
 import java.util.Objects;
 
-public class Cylinder extends AbstractFigure {
+public class Cylinder implements FigureCalculations {
     private double height;
     private double baseRadius;
 
@@ -11,7 +11,6 @@ public class Cylinder extends AbstractFigure {
             throw new IllegalArgumentException("Values must be positive");
         this.height = height;
         this.baseRadius = baseRadius;
-        this.volume = calculateVolume();
     }
 
     public double getHeight() {
@@ -30,14 +29,9 @@ public class Cylinder extends AbstractFigure {
         this.baseRadius = baseRadius;
     }
 
-
-    public double getVolume() {
-        return volume;
-    }
-
     @Override
     public String toString() {
-        return "Cylinder{" + "height=" + height + ", baseRadius=" + baseRadius + ", volume=" + volume + '}';
+        return "Cylinder{" + "height=" + height + ", baseRadius=" + baseRadius + ", volume=" + calculateVolume() + '}';
     }
 
     @Override

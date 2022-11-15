@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84729741-413d-4210-a7a8-e277cbf7df6d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/part3/figures/FigureCalculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part2/SortStringList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part2/SortStringListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/FigureSortingOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/AbstractFigure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/part3/figures/Sphere.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/part3/FigureSortingOperationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -62,11 +67,26 @@
       <recent name="part2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortStringListTest">
+  <component name="RunManager" selected="JUnit.FigureSortingOperationTest">
     <configuration name="All in homework" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FigureSortingOperationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="part3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="part3" />
+      <option name="MAIN_CLASS_NAME" value="part3.FigureSortingOperationTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,29 +138,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortStringListTest.top5ShouldThrowNPEifInputIsNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="part2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="part2" />
-      <option name="MAIN_CLASS_NAME" value="part2.SortStringListTest" />
-      <option name="METHOD_NAME" value="top5ShouldThrowNPEifInputIsNull" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FigureSortingOperationTest" />
         <item itemvalue="JUnit.SortStringListTest" />
         <item itemvalue="JUnit.SortStringListTest.top5ShouldReturnAMapWith5MostCommonHashTagsOfAGivenListOfStrings" />
         <item itemvalue="JUnit.All in homework" />
         <item itemvalue="JUnit.FigureSortingOperationTest.volumeGettersOfFiguresShouldReturnCorrectValues" />
-        <item itemvalue="JUnit.SortStringListTest.top5ShouldThrowNPEifInputIsNull" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +170,10 @@
       <workItem from="1668075564488" duration="19000" />
       <workItem from="1668109287211" duration="1068000" />
       <workItem from="1668164358020" duration="2110000" />
-      <workItem from="1668167161686" duration="2368000" />
+      <workItem from="1668167161686" duration="2881000" />
+      <workItem from="1668522601525" duration="80000" />
+      <workItem from="1668522693420" duration="10000" />
+      <workItem from="1668523971381" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1667581825315</created>
@@ -189,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667940917243</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor 'part2'; Now using Set to distinct.">
+      <created>1668169755421</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668169755421</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +213,8 @@
     <MESSAGE value="upd" />
     <MESSAGE value="Add javaDoc, minor refactoring" />
     <MESSAGE value="Upd jUnit4 to jUnit5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upd jUnit4 to jUnit5" />
+    <MESSAGE value="Refactor 'part2'; Now using Set to distinct." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor 'part2'; Now using Set to distinct." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

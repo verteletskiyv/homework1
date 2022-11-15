@@ -2,14 +2,13 @@ package part3.figures;
 
 import java.util.Objects;
 
-public class Cube extends AbstractFigure {
+public class Cube implements FigureCalculations {
     private double edge;
 
     public Cube(double edge) {
         if (edge <= 0)
             throw new IllegalArgumentException("Values must be positive");
         this.edge = edge;
-        this.volume = calculateVolume();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class Cube extends AbstractFigure {
 
     @Override
     public String toString() {
-        return "Cube{" + "edge=" + edge + ", volume=" + volume + '}';
+        return "Cube{" + "edge=" + edge + ", volume=" + calculateVolume() + '}';
     }
 
     public double getEdge() {
@@ -28,10 +27,6 @@ public class Cube extends AbstractFigure {
 
     public void setEdge(double edge) {
         this.edge = edge;
-    }
-
-    public double getVolume() {
-        return volume;
     }
 
     @Override
